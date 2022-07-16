@@ -1,0 +1,28 @@
+class Funcionarios:
+    def __init__(self, matricula, nome, salario):
+        self.matricula = matricula
+        self.nome = nome
+        self.salario = salario
+
+class estagiario(Funcionarios):
+    pass
+
+class Gerente(Funcionarios):
+    def __init__(self, matricula, nome, salario, setor, comissao):
+        super().__init__(matricula, nome, salario)
+        self.setor = setor
+        self.comissao = comissao
+
+    def contratar(self, qtd_funcionarios):
+        if qtd_funcionarios < 10:
+            print('Vamos contratar mais funcionários.')
+        else:
+            print('Nosso setor está completo.')
+
+    def demitir(self, nota_avaliacao):
+        if nota_avaliacao < 5:
+            print('Esse funcionário está desligado.')
+        else:
+            print('Você não faz mais que sua obrigação.')
+
+    
